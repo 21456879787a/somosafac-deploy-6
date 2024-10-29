@@ -79,7 +79,7 @@ public class EmailService {
 
         List<String> destinatarios = new ArrayList<>();
 
-        if (emailDTO.getDestinatario().equals("Listado General")) {
+        if (emailDTO.getDestinatario().toLowerCase().equals("listado general")) {
             List<UsuarioEntity> usuarios = usuarioRepository.findByTipoUsuario(Role.ADMIN);
             System.out.println(usuarios);
 
